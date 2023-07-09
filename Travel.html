@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- Using multiple languages is possible, but the page is english only atm -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Title in the browser tab -->
+  <title>Personal WebSite</title>
+  <!-- Description used when the site is added to favorites -->
+  <meta name="description" content="my site">
+  <meta name="author" content="Maya" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- This attribute controls the Chrome action bar color on mobile devices -->
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Particles.js container used as a background. Removing it removes the particles -->
+<div id="particles-js"></div>
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Nav - navbar of contents, used in the desktop version -->
+  <nav id="nav">
+    <ul>
+      <li><a href="prob.html">Who are you?</a></li>
+      <li><a href="Education.html">Education</a></li>
+      <li><a href="Skills.html">Skills</a></li>
+      <li><a href="Travel.html" class="active">Travel</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main - the "white part" -->
+  <div id="main">
+
+
+    <!-- Projects - small introduction, list of projects -->
+    <section id="projects" class="main special">
+      <header class="major">
+        <h2><b>MY TRAVELS</b></h2>
+        <p>I have been to several countries, but Turkey has left me with the best
+          memories. <p>These are my favorite cities in Turkey that I have visited:</p>
+        </p>
+      </header>
+
+
+
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h3><b>ERBAA</b></h3>
+          </header>
+          <div>
+            <span class="image-small"><img src=web/park.jpg alt="" /></span>
+            <p>
+
+              Erbaa is a town in Tokat Province in the Black Sea region of Turkey. It is the seat of Erbaa District.
+              Its population is 75,210 (2022). The town of Erbaa lies on the left bank of
+              the Kelkit River and is surrounded by the Erbaa Plain, most of which lies in its district.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h3><b>ISTANBUL</b></h3>
+          </header>
+          <div>
+            <span class="image-small"><img src=web/ngt_we_bistanbul_gettyimages-668990458_hr.jpg alt="" /></span>
+            <p>
+              Istanbul, the bustling metropolis of Turkey, is a city full of charm, where the past goes hand in hand with the present and every step brings to light a relic of times gone by
+              . At the crossroads of two continents - Europe and Asia - this spectacular city has absorbed the best of both worlds.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h3><b>IZMIR</b></h3>
+          </header>
+          <div>
+            <span class="image-small"><img src=web/Best-Things-to-do-in-Izmir-Turkey-featured-Izmir-Clock-Tower.webp alt="" /></span>
+            <p>
+              Izmir is one of the oldest cities of the Mediterranean world and has been of almost continuous historical
+              importance during the last 5,000 years. Izmir, historically Smyrna, city in western Turkey. The country’s third largest city and one of its largest ports, Izmir
+              lies at the head of the sheltered Gulf of Izmir on the deeply indented coast of the Aegean Sea.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+  </div>
+
+  <!-- Footer - contacts and another short text -->
+  <footer id="footer">
+    <section>
+      <h2>Why contact me?</h2>
+      <!-- A final message for the viewer -->
+      <p>You can contact me for any question that you have and I'll do my best to provide you with an answer!</p>
+
+    </section>
+    <section>
+      <h2>How to contact me:</h2>
+      <!-- Some contact informations. Other informations can be added -->
+      <dl class="alt">
+        <dt>Email</dt>
+        <dd><a href="mailto:majamaneva@gmail.com">majamaneva@gmail.com</a></dd>
+        <dt>City</dt>
+        <dd>Kavadarci, North Macedonia</dd>
+        <dt>Social</dt>
+        <dd>
+          <ul class="icons">
+            <li><a href="https://github.com/maneva133" target="_blank" class="fab fa-github"></a></li>
+
+            <li><a href=https://www.instagram.com/manevamaja/" target="_blank" class="fab fa-instagram"></a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </footer>
+</div>
+
+
+
+
+<script>
+  // Variables to change to correctly generate the initial description and other informations
+  birthYear = 2003; // Year of birth
+  birthMonth = 5; // Month of birth, without leading zero
+  birthDay = 2; // Day of birth, without leading zero
+  experienceStart = 2022; // Year from which the experience starts (e.g. when I wrote my first line of code)
+  date = new Date();
+  year = date.getFullYear();
+  experience = year - experienceStart;
+
+  // Assign the years of experience in the statistics
+  document.getElementById('experience').innerHTML = experience;
+
+  // Assign the current year to the copyright line
+  document.getElementById('year').innerHTML = year;
+
+  if ((date.getMonth() + 1 < birthMonth && date.getDate() <= birthDay) || date.getMonth() < birthMonth)
+    year--;
+  age = year - birthYear;
+
+
+  // Assign the description to the correct html element, given its id
+  document.getElementById('me').innerHTML = me;
+</script>
+
+</body>
+
+</html>

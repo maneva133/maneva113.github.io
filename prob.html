@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Using multiple languages is possible, but the page is english only atm -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Title in the browser tab -->
+    <title>Personal WebSite</title>
+    <!-- Description used when the site is added to favorites -->
+    <meta name="description" content="my site">
+    <meta name="author" content="Maya" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- This attribute controls the Chrome action bar color on mobile devices -->
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Particles.js container used as a background. Removing it removes the particles -->
+<div id="particles-js"></div>
+<!-- Wrapper -->
+<div id="wrapper">
+
+
+    <!-- Nav - navbar of contents, used in the desktop version -->
+    <nav id="nav">
+        <ul>
+            <li><a href="prob.html" class="active">About me</a></li>
+            <li><a href="Education.html">Education</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Travel.html">Travel</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main - the "white part" -->
+    <div id="main">
+
+        <!-- Introduction - an image and a bio -->
+        <section id="intro" class="main special">
+            <div class="spotlight">
+                <div class="content">
+                    <header class="major">
+                        <h2><b>ABOUT ME</b></h2>
+                    </header>
+                    <p>
+                        Hello there! </p>
+                        <p>
+                    My name is Maja. I'm 20 years old and I'm from Kavadarci. I'm a FCSE student and I just
+                            finished my first year there.
+                            I like coding and solving logical issues.</p>
+
+                    <p>
+                    I'm sociable, communicative and I always respect other people's opinion.
+                    </p>
+                    <p>
+                        Apart from my student life, I like going on hikes and exploring nature,
+                       grabbing coffee with my friends and playing with my dog.
+
+                        <\p>
+
+                    </p>
+                </div>
+                <span class="image"><img src="web/me.jpg" alt="" /></span>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer - contacts and another short text -->
+    <footer id="footer">
+        <section>
+            <h2>Why contact me?</h2>
+            <!-- A final message for the viewer -->
+            <p>You can contact me for any question that you have and I'll do my best to provide you with an answer!</p>
+        </section>
+        <section>
+            <h2>How to contact me:</h2>
+            <!-- Some contact informations. Other informations can be added -->
+            <dl class="alt">
+                <dt>Email</dt>
+                <dd><a href="mailto:majamaneva@gmail.com">majamaneva@gmail.com</a></dd>
+                <dt>City</dt>
+                <dd>Kavadarci, North Macedonia</dd>
+                <dt>Social</dt>
+                <dd>
+                    <ul class="icons">
+                        <li><a href="https://github.com/maneva133" target="_blank" class="fab fa-github"></a></li>
+
+                        <li><a href=https://www.instagram.com/manevamaja/" target="_blank" class="fab fa-instagram"></a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </section>
+    </footer>
+</div>
+
+
+
+
+<script>
+    // Variables to change to correctly generate the initial description and other informations
+    birthYear = 2003; // Year of birth
+    birthMonth = 5; // Month of birth, without leading zero
+    birthDay = 2; // Day of birth, without leading zero
+    experienceStart = 2022; // Year from which the experience starts (e.g. when I wrote my first line of code)
+    date = new Date();
+    year = date.getFullYear();
+    experience = year - experienceStart;
+
+    // Assign the years of experience in the statistics
+    document.getElementById('experience').innerHTML = experience;
+
+    // Assign the current year to the copyright line
+    document.getElementById('year').innerHTML = year;
+
+    if ((date.getMonth() + 1 < birthMonth && date.getDate() <= birthDay) || date.getMonth() < birthMonth)
+        year--;
+    age = year - birthYear;
+
+
+    // Assign the description to the correct html element, given its id
+    document.getElementById('me').innerHTML = me;
+</script>
+
+</body>
+
+</html>
